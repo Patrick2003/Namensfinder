@@ -12,20 +12,47 @@
         }
 
         .name {
+          transition: all 10s linear;
             font-family: Calibri;
-            font-size: 48px;
+            font-size: 75px;
             font-weight: bold;
             color: rgb(255, 255, 255);
             flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            /* non- selectable */
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            /* Likely future */
+            /* non- selectable */
+        }
+
+        /*
+        .next-name-button:hover {
+            background-color: rgb(180, 100, 145);
+        }
+        */
+
+        .next-name-button:active {
+            background-color: rgb(180, 100, 145);
         }
 
         body,
         html {
             margin: 0;
             padding: 0;
+        }
+
+
+        .modify {
+
+          transform: rotate(86400deg);
         }
 
         .center-vh {
@@ -42,9 +69,7 @@
             padding: 12px;
             text-align: center;
             width: 100%;
-
             /* non- selectable */
-
             -webkit-user-select: none;
             /* Chrome all / Safari all */
             -moz-user-select: none;
@@ -53,8 +78,8 @@
             /* IE 10+ */
             user-select: none;
             /* Likely future */
-
             /* non- selectable */
+            transition: all 1s;
         }
     </style>
 </head>
@@ -91,6 +116,10 @@
             var nameIndex = Math.round(Math.random() * 4);
             var name = nameList[nameIndex];
             document.querySelector('.name').innerHTML = name;
+            document.querySelector('.name').classList.toggle('modify');
+
+
+
         });
     </script>
 </body>
