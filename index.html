@@ -11,15 +11,22 @@
             background: rgb(80, 80, 80);
         }
 
-        .😁 {
+        .name {
             font-family: Calibri;
             font-size: 48px;
             font-weight: bold;
             color: rgb(255, 255, 255);
+            flex-grow: 1;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
         }
 
         .center-vh {
-          height: 100vh;
+            height: 100vh;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -32,6 +39,14 @@
             padding: 12px;
             text-align: center;
             width: 100%;
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            /* Likely future */
         }
     </style>
 </head>
@@ -39,7 +54,7 @@
 <body>
 
     <section class="center-vh">
-        <div class="😁">Horst</div>
+        <div class="name">Horst</div>
 
         <div class="next-name-button">NÄCHSTE</div>
     </section>
