@@ -1,3 +1,3 @@
 # Namensfinder
 
-Application for finding a baby's name. 
+Application which helps you to find a baby's name.  
