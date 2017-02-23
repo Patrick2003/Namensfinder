@@ -4,27 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
+
+  <style type="text/css">
+    body {
+      background: rgb(80, 80, 80);
+    }
+
+    .name {
+      font-size: 32px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+  </style>
 </head>
 <body>
 
-<h1>Ich brauch oin Babynamen!</h1>
-
-<h2>Unser Vorschlag:</h2>
 <section>
-  Nenn es <span class="name">Horst</span>!
+  <span class="name">Horst</span>
 </section>
 
-<p>
-  <button type="button" class="next-name-button">weida!</button>  
-</p>
-  
- 
+
+<!--
+  <h2>Weiterentwicklung Ideen</h2>
+
+  <ul>
+    <li>Trennung nach Geschlecht</li>
+    <li>Optimierung für Smartphones</li>
+    <li>„Hübsche” Anzeige: Name, Häufigkeit</li>
+    <li>Charts: Beliebteste Namen</li>
+    <li>Swipen</li>
+    <li>Gefällt mir / Gefällt mir nicht</li>
+    <li>Seltenste Namen</li>
+    <li>Regionale Unterschiede</li>
+    <li>namen filtern</li>
+  </ul>
+-->
+
 <script>
-  var number = 0;
-  var booleans = false;
-  
   var nameList = ["Hubert", "Horst", "Paul", "Bernd", "Albrecht"];
-  
+
   document.querySelector('.next-name-button').addEventListener('click', function() {
     var nameIndex = Math.round(Math.random() * 4);
     var name = nameList[nameIndex];
