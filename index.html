@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<h1>Ich brauch oin Babynamen!</h1>
+
+<h2>Unser Vorschlag:</h2>
+<section>
+  Nenn es <span class="name">Horst</span>!
+</section>
+
+<p>
+  <button type="button" class="next-name-button">weida!</button>  
+</p>
+  
+ 
+<script>
+  var number = 0;
+  var booleans = false;
+  
+  var nameList = ["Hubert", "Horst", "Paul", "Bernd", "Albrecht"];
+  
+  document.querySelector('.next-name-button').addEventListener('click', function() {
+    var nameIndex = Math.round(Math.random() * 4);
+    var name = nameList[nameIndex];
+    document.querySelector('.name').innerHTML = name;
+  });
+</script>
+</body>
+</html>
