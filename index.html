@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
 
-  <style type="text/css">
-    body {
-      background: rgb(80, 80, 80);
-    }
+    <style type="text/css">
+        body {
+            background: rgb(80, 80, 80);
+        }
 
-    .name {
-      font-size: 32px;
-      font-weight: bold;
-      color: rgb(255, 255, 255);
-    }
-  </style>
+        .😁 {
+            font-family: Calibri;
+            font-size: 48px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        .center-vh {
+          height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .next-name-button {
+            background-color: #ffff3f;
+            padding: 12px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
 
-<section>
-  <span class="name">Horst</span>
-</section>
+    <section class="center-vh">
+        <div class="😁">Horst</div>
+
+        <div class="next-name-button">NÄCHSTE</div>
+    </section>
 
 
-<!--
+    <!--
   <h2>Weiterentwicklung Ideen</h2>
 
   <ul>
@@ -40,14 +61,15 @@
   </ul>
 -->
 
-<script>
-  var nameList = ["Hubert", "Horst", "Paul", "Bernd", "Albrecht"];
+    <script>
+        var nameList = ["Hubert", "Horst", "Paul", "Bernd", "Albrecht"];
 
-  document.querySelector('.next-name-button').addEventListener('click', function() {
-    var nameIndex = Math.round(Math.random() * 4);
-    var name = nameList[nameIndex];
-    document.querySelector('.name').innerHTML = name;
-  });
-</script>
+        document.querySelector('.next-name-button').addEventListener('click', function() {
+            var nameIndex = Math.round(Math.random() * 4);
+            var name = nameList[nameIndex];
+            document.querySelector('.name').innerHTML = name;
+        });
+    </script>
 </body>
+
 </html>
